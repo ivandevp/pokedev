@@ -1,21 +1,21 @@
 import {
-    SET_POKEMONS,
-    SET_POKEMONS_ERROR,
+    SET_POKEMON,
+    SET_POKEMON_ERROR,
 } from '../actions/actionTypes';
 
 const initialState = {
-    results: {},
+    pokemon: {},
     error: null,
 };
 
-const pokemons = (state = initialState, action) => {
+const pokemon = (state = initialState, action) => {
     switch (action.type) {
-        case SET_POKEMONS:
+        case SET_POKEMON:
             return {
                 ...state, 
-                results: action.payload,
+                pokemon: action.payload,
             };
-        case SET_POKEMONS_ERROR:
+        case SET_POKEMON_ERROR:
             return {
                 ...state, 
                 error: action.payload,
@@ -25,4 +25,4 @@ const pokemons = (state = initialState, action) => {
     }
 };
 
-export default pokemons;
+export default pokemon;
