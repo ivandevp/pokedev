@@ -1,4 +1,4 @@
-const ROOT_ENDPOINT = 'https://pokeapi-215911.firebaseapp.com/api/v2/';
+const ROOT_ENDPOINT = process.env.POKE_ENDPOINT || 'https://pokeapi-215911.firebaseapp.com/api/v2/';
 
 const API_ENDPOINTS = {
     pokemons: `${ROOT_ENDPOINT}pokemon/`,
